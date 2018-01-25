@@ -9,6 +9,8 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/web.js" defer></script>
+  <script type="text/javascript" src="../js/bitcoin.js" defer></script>
 	<script src="../custom.js"></script>
 
 	<body>
@@ -31,27 +33,60 @@
           <ul class="nav navbar-nav">
             <li><a href="../index.html" title=" Index ">Index</a></li>
             <li><a href="index.html" title=" Bitcoin ">Bitcoin</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
+            <li><a href="../Token/index.html" title=" Token ">Eciao</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <a href="https://mubiz.com/developers/bitcoin/" title="Mubiz"> 
-      <div class="cropper">
-        <img src="../style/img/mubiz.png" alt="mubiz" class="centrato"/>
+    
+ <article class="box page-content" id="explbit">
+                    <div class="infos">
+                      
+                      
+                      
+                      <section>
+                      
+                        <input type="text" class="fff" id="input-block" value="Hash / Hauteur" onclick="javascript:this.value=''"/>
+                        <a href="#resultat" class="button" id="btn-block">Block</a>
+
+                      </section>  
+
+                      
+                      <section>
+                        <input type="text" class="fff" id="input-trx" value="Hash" onclick="javascript:this.value=''" />
+                        <a href="#resultat" class="button" id="btn-trx">Transaction</a>
+                      </section>  
+                      
+                      <section> 
+                        <input type="text" class="fff" id="input-add" value="Adresse Bitcoin" onclick="javascript:this.value=''" />
+                        <a href="#resultat" class="button" id="btn-add">Adresse</a>
+                      </section>
+                    </div>
+
+                      <section>
+                      
+                        
+                        <div id="resultat">
+                
+                        </div>
+                      
+                      </section>
+                    </article>
+
+      <div class="container">
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-th fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+              <h2>
+                <span id="number_blocks"></span> blocks
+              </h2>
+            </div>
+          </div>
+          </div>
       </div>
-    </a>
     </body>
 </html>

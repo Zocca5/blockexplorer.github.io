@@ -1,22 +1,5 @@
-$(document).ready(function() {
-	$.ajax({
-		url : "https://bitcoin.mubiz.com/blocks",
-		dataType : "json",
-		contentType : "application/json; charset=utf-8",
-		type : "GET",
-		timeout:	"5000",
-		async : false,
 
-		success : function(data) {
-			$('#number_blocks').append(data.blocks);
-		},
-
-		error : function(xhr, status, err) {
-			$('#number_blocks').append(err+" N/A");
-		}
-	});
-});
-
+$(document).ready(function(){
 
 	$('#btn-block').click(function(){
 		$.get( 'https://api.blockcypher.com/v1/btc/main/blocks/' +$('#input-block').val(), function(data) {
@@ -31,11 +14,11 @@ $(document).ready(function() {
 				 +data.size + '</td></tr> </table> ';
 
 			}
-			$('#result').html( sortie );
+			$('#resultat').html( sortie );
 			});
 	});
 
-		$('#btn-trx').click(function(){
+	$('#btn-trx').click(function(){
 		$.get( 'https://api.blockcypher.com/v1/btc/main/txs/' +$('#input-trx').val(), function(data) {
 				var sortie = '';
 			if(data.error != undefined){
@@ -70,3 +53,4 @@ $(document).ready(function() {
 			$('#resultat').html( sortie );
 			});
 	});
+});
